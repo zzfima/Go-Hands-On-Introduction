@@ -8,7 +8,7 @@ type Shape struct {
 	size              int
 }
 
-func main() {
+func mainStruct() {
 	s1 := new(Shape)
 	PrintShape(s1)
 
