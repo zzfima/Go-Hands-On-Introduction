@@ -9,7 +9,7 @@ const a1 = "a"
 const a2 = 'a'
 const a3 rune = 'a'
 
-func main() {
+func mainBasicTypes() {
 	//types
 	fmt.Printf("%s %T\n", a1, a1)
 	fmt.Printf("%c %s\n", a2, reflect.TypeOf(a2))
