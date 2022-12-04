@@ -8,7 +8,7 @@ import (
 	proverbs "github.com/jboursiquot/go-proverbs"
 )
 
-func main() {
+func mainPackage() {
 	v1 := getRandomProverb()
 	fmt.Println(v1)
 	v2 := getRandomProverb()

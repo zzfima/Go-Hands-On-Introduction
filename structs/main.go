@@ -1,14 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-//Shape describes shape.
+// Shape describes shape.
 type Shape struct {
 	name, description string
 	size              int
 }
 
-func mainStruct() {
+func mainStructs() {
 	s1 := new(Shape)
 	PrintShape(s1)
 
@@ -24,16 +26,23 @@ func mainStruct() {
 
 	s4 := NewShape()
 	PrintShape(&s4)
+
+	fmt.Println(&s3)
+	print(s3)
 }
 
-//NewShape shape factory
+// NewShape shape factory
 func NewShape() Shape {
 	return Shape{
 		"no name", "no desc", 0,
 	}
 }
 
-//PrintShape Shape ToString
+func print(s Shape) {
+	fmt.Printf("name: %s, description: %s, size: %d, address: %v\n", s.name, s.description, s.size, &s)
+}
+
+// PrintShape Shape ToString
 func PrintShape(s *Shape) {
 	fmt.Printf("name: %s, description: %s, size: %d\n", s.name, s.description, s.size)
 }
