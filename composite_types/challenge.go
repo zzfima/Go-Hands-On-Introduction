@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/davecgh/go-spew/spew"
+)
 
 type author struct {
 	name string
@@ -29,7 +33,7 @@ func (lib library) lookupByAuthorName(authorName string) (authorBooks []book) {
 	return
 }
 
-func mainCompositeTypes() {
+func mainComposite() {
 	a1 := author{name: "Alex"}
 	a2 := author{name: "Sofy"}
 
@@ -44,6 +48,6 @@ func mainCompositeTypes() {
 	b7 := book{"Algo3", a2}
 	lib.addBook(b7)
 
-	fmt.Println(lib.lookupByAuthorName("Alex"))
+	spew.Dump(lib.lookupByAuthorName("Alex"))
 	fmt.Println(lib.lookupByAuthorName("Sofy"))
 }
