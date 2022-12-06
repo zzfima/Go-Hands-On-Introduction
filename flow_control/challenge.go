@@ -11,7 +11,7 @@ import (
 
 // run as "go run challenge.go data.txt"
 // or add to run configuration: "args": ["data.txt"]
-func main() {
+func mainFlowControl() {
 	//defers
 	defer func() {
 		if e := recover(); e != nil {
