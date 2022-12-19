@@ -20,4 +20,10 @@ func TestAddElements(t *testing.T) {
 	for _, tst := range tests {
 		require.Equal(t, tst.want, sumElementsSlice(tst.input...))
 	}
+
+	for _, tst := range tests {
+		t.Run(tst.name, func(t *testing.T) {
+			require.Equal(t, tst.want, sumElementsSlice(tst.input...))
+		})
+	}
 }
